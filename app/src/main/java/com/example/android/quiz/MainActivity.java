@@ -5,14 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import static com.example.android.quiz.R.id.garage;
+import static com.example.android.quiz.R.id.two004;
 
 public class MainActivity extends AppCompatActivity {
 
-    int totalScore = 0;
-    String name;
+    int totalScore;
+    String answer1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,48 +22,38 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void submitAnswers(View view){
-        CheckBox garageCheckBox = (CheckBox) findViewById(garage);
-        boolean hasGarage = garageCheckBox.isChecked();
-        if (hasGarage){
-            totalScore = totalScore + 1;
+    public void submitAnswers(View view) {
+        RadioButton garageRadioButton = (RadioButton) findViewById(garage);
+        boolean hasGarage = garageRadioButton.isChecked();
+        if (hasGarage) {
+            totalScore++;
         }
 
-        CheckBox two004CheckBox = (CheckBox) findViewById(R.id.two004);
-        boolean hasTwo004 = two004CheckBox.isChecked();
-        if (hasTwo004){
-            totalScore = totalScore + 1;
+        RadioButton two004RadioButton = (RadioButton) findViewById(two004);
+        boolean hasTwo004 = two004RadioButton.isChecked();
+        if (hasTwo004) {
+            totalScore++;
         }
 
-        CheckBox graUseIntCheckBox = (CheckBox) findViewById(R.id.graUseInt);
-        boolean hasGraUseInt = graUseIntCheckBox.isChecked();
-        if (hasGraUseInt){
-            totalScore = totalScore + 1;
+        CheckBox monCheckBox = (CheckBox) findViewById(R.id.monday);
+        CheckBox friCheckBox = (CheckBox) findViewById(R.id.friday);
+        CheckBox satCheckBox = (CheckBox) findViewById(R.id.saturday);
+        CheckBox sunCheckBox = (CheckBox) findViewById(R.id.sunday);
+        if (satCheckBox.isChecked() && sunCheckBox.isChecked() && !monCheckBox.isChecked() && !friCheckBox.isChecked()) {
+            totalScore++;
         }
 
-        CheckBox terabyteCheckBox = (CheckBox) findViewById(R.id.terabyte);
-        boolean hasTerabyte = terabyteCheckBox.isChecked();
-        if (hasTerabyte){
-            totalScore = totalScore + 1;
+        EditText nameEditText = (EditText) findViewById(R.id.california);
+        answer1 = nameEditText.getText().toString();
+        if (answer1.equalsIgnoreCase("California")) {
+            totalScore++;
         }
 
-        CheckBox hyperCheckBox = (CheckBox) findViewById(R.id.hyper);
-        boolean hasHyper = hyperCheckBox.isChecked();
-        if (hasHyper){
-            totalScore = totalScore + 1;
-        }
-
-        EditText nameEditText = (EditText) findViewById(R.id.name_edit_text);
-        name = nameEditText.getText().toString();
-
-        Toast.makeText(MainActivity.this, name + ", you scored " + totalScore + " out of 5", Toast.LENGTH_SHORT).show();
+        if (totalScore < 4) {
+            Toast.makeText(MainActivity.this, "You scored " + totalScore + " out of 4", Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(MainActivity.this, "Amazing! You scored a perfect " + totalScore + " out of 4", Toast.LENGTH_SHORT).show();
         totalScore = 0;
     }
-
-/*    private void displayName (String name){
-        EditText nameEditText = (EditText) findViewById(R.id.name_edit_text);
-        nameEditText.setText(name);
-    }*/
-
 
 }

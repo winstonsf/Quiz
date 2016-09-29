@@ -14,12 +14,20 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.example.android.justjava.MainActivity">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/question1"
+            android:textAllCaps="true" />
+
         <EditText
-            android:id="@+id/name_edit_text"
+            android:id="@+id/california"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="Type your name"
+            android:hint="Type your answer here"
             android:inputType="textCapWords" />
 
         <TextView
@@ -27,190 +35,125 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="16dp"
-            android:text="Quiz instructions: Select only one answer per question. Click Submit Answers when finished." />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="16dp"
-            android:text="1. The companies HP, Microsoft and Apple were all started in a what?"
+            android:text="2. The companies HP, Microsoft and Apple were all started in a what?"
             android:textAllCaps="true" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Living room"
-            android:textSize="16sp" />
+            android:orientation="vertical">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Kitchen"
-            android:textSize="16sp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Living room"
+                android:textSize="16sp" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Basement"
-            android:textSize="16sp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Kitchen"
+                android:textSize="16sp" />
 
-        <CheckBox
-            android:id="@+id/garage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Garage"
-            android:textSize="16sp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Basement"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="16dp"
-            android:text="2. What year was Facebook founded?"
-            android:textAllCaps="true" />
-
-        <CheckBox
-            android:id="@+id/two004"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="2004"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="2005"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="2006"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="2007"
-            android:textSize="16sp" />
+            <RadioButton
+                android:id="@+id/garage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Garage"
+                android:textSize="16sp" />
+        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="16dp"
-            android:text="3. In computer science, what does GUI stand for?"
+            android:text="3. What year was Facebook founded?"
             android:textAllCaps="true" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="General universal interface"
-            android:textSize="16sp" />
+            android:orientation="vertical">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="General user interface"
-            android:textSize="16sp" />
+            <RadioButton
+                android:id="@+id/two004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="2004"
+                android:textSize="16sp" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Graphical universal interface"
-            android:textSize="16sp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="2005"
+                android:textSize="16sp" />
 
-        <CheckBox
-            android:id="@+id/graUseInt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Graphical user interface"
-            android:textSize="16sp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="2006"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="2007"
+                android:textSize="16sp" />
+        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="16dp"
-            android:text="4. 1,024 Gigabytes is equal to what?"
+            android:text="4. Which days are not weekdays?"
             android:textAllCaps="true" />
 
         <CheckBox
+            android:id="@+id/monday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="10,000 megabytes"
+            android:text="Monday"
             android:textSize="16sp" />
 
         <CheckBox
+            android:id="@+id/friday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="100,000 megabytes"
+            android:text="Friday"
             android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/terabyte"
+            android:id="@+id/saturday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="1 terabyte"
+            android:text="Saturday"
             android:textSize="16sp" />
 
         <CheckBox
+            android:id="@+id/sunday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="10 terabyte"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="16dp"
-            android:text="5. What does HTTP stand for in a website address?"
-            android:textAllCaps="true" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="HighTime Transfer Protocol"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="HyperTime Transfer Protocol"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@+id/hyper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="HyperText Transfer Protocol"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="HighTension Transfer Protocol"
+            android:text="Sunday"
             android:textSize="16sp" />
 
         <Button
